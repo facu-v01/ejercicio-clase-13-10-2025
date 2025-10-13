@@ -13,8 +13,8 @@ function App() {
         <nav style={{ padding: '20px', borderBottom: '1px solid #ccc' }}> 
           <Link to="/" style={{ marginRight: '15px' }}>Inicio</Link> 
           <Link to="/posts" style={{ marginRight: '15px' }}>Artículos</Link> 
-          <Link to="/new-post">Nuevo Artículo</Link> 
-          <Link to="/stats">Estadísticas</Link> 
+          <Link to="/new-post" style={{ marginRight: '15px' }}>Nuevo Artículo</Link> 
+          <Link to="/stats" style={{ marginRight: '15px' }}>Estadísticas</Link> 
         </nav> 
  
         <Routes> 
