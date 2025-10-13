@@ -1,9 +1,10 @@
 import React from 'react'; 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'; 
-import Home from './components/Home'; 
-import Posts from './components/Posts'; 
-import NewPost from './components/NewPost'; 
+import Home from './pages/Home'; 
+import Posts from './pages/Posts'; 
+import NewPost from './pages/NewPost'; 
 import PostDetail from './components/PostDetail'; 
+import Stats from './pages/Stats';
  
 function App() { 
   return ( 
@@ -13,6 +14,7 @@ function App() {
           <Link to="/" style={{ marginRight: '15px' }}>Inicio</Link> 
           <Link to="/posts" style={{ marginRight: '15px' }}>Artículos</Link> 
           <Link to="/new-post">Nuevo Artículo</Link> 
+          <Link to="/stats">Estadísticas</Link> 
         </nav> 
  
         <Routes> 
@@ -20,6 +22,7 @@ function App() {
           <Route path="/posts" element={<Posts />} /> 
           <Route path="/new-post" element={<NewPost />} /> 
           <Route path="/posts/:id" element={<PostDetail />} /> 
+          <Route path="/stats" element={<Stats />} /> 
         </Routes> 
       </div> 
     </BrowserRouter> 
