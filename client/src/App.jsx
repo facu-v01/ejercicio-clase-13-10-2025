@@ -7,8 +7,7 @@ import PostDetail from './components/PostDetail';
 import Stats from './pages/Stats';
  
 function App() { 
-  return ( 
-    <BrowserRouter> 
+  return (
       <div className="app"> 
         <nav style={{ padding: '20px', borderBottom: '1px solid #ccc' }}> 
           <Link to="/" style={{ marginRight: '15px' }}>Inicio</Link> 
@@ -24,8 +23,7 @@ function App() {
           <Route path="/posts/:id" element={<PostDetail />} /> 
           <Route path="/stats" element={<Stats />} /> 
         </Routes> 
-      </div> 
-    </BrowserRouter> 
+      </div>
   ); 
 } 
  
