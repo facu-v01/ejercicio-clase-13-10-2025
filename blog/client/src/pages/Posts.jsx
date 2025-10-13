@@ -1,12 +1,7 @@
 import React, { useState } from 'react'; 
 import { Link } from 'react-router-dom'; 
  
-const Posts = () => { 
-  const [posts] = useState([ 
-    { id: 1, title: 'Mi primer artículo', content: 'Contenido del primer artículo...', author: 'Juan Pérez' }, 
-    { id: 2, title: 'React Router DOM', content: 'Aprendiendo sobre rutas en React...', author: 'María García' }, 
-    { id: 3, title: 'Formularios en React', content: 'Cómo manejar formularios...', author: 'Carlos López' } 
-  ]); 
+const Posts = ({posts}) => { 
 
   const stats = posts.reduce((auth, post) => {
     auth[post.author] = (auth[post.author] || 0) + 1;
