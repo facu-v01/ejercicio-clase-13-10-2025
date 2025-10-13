@@ -8,9 +8,9 @@ const Posts = () => {
     { id: 3, title: 'Formularios en React', content: 'Cómo manejar formularios...', author: 'Carlos López' } 
   ]); 
 
-  const stats = posts.reduce((acc, post) => {
-    acc[post.author] = (acc[post.author] || 0) + 1;
-    return acc;
+  const stats = posts.reduce((auth, post) => {
+    auth[post.author] = (auth[post.author] || 0) + 1;
+    return auth;
   }, {});
  
   return ( 
