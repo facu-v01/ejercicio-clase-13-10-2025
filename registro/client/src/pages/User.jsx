@@ -29,6 +29,8 @@ const User = () => {
                     <p><strong>Teléfono:</strong> {savedData.phone}</p> 
                     <p><strong>Dirección:</strong> {savedData.address}</p> 
                     <p><strong>Ciudad:</strong> {savedData.city}</p> 
+                    
+                    <h3>Información de la cuenta</h3>
                     <p>
                         <strong>Edad de la cuenta: </strong> 
                         {`${days} ${days !== 1 ? 'días' : 'día'}, ${hours} ${hours !== 1 ? 'horas' : 'hora'}, ${minutes} ${minutes !== 1 ? 'minutos' : 'minuto'} y ${seconds} ${seconds !== 1 ? 'segundos' : 'segundo'}`}
