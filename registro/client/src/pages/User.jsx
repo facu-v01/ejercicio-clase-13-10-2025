@@ -29,7 +29,10 @@ const User = () => {
                     <p><strong>Teléfono:</strong> {savedData.phone}</p> 
                     <p><strong>Dirección:</strong> {savedData.address}</p> 
                     <p><strong>Ciudad:</strong> {savedData.city}</p> 
-                    <p><strong>Edad de la cuenta:</strong> {`${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos`}</p> 
+                    <p>
+                        <strong>Edad de la cuenta: </strong> 
+                        {`${days} ${days !== 1 ? 'días' : 'día'}, ${hours} ${hours !== 1 ? 'horas' : 'hora'}, ${minutes} ${minutes !== 1 ? 'minutos' : 'minuto'} y ${seconds} ${seconds !== 1 ? 'segundos' : 'segundo'}`}
+                    </p> 
                 </div>}
         </>
     )
