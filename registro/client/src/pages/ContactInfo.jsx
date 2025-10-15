@@ -7,12 +7,13 @@ const ContactInfo = () => {
     email: '', 
     phone: '', 
     address: '', 
-    city: '' 
+    city: '',
+    creationDate: new Date().toISOString()
   }); 
  
   React.useEffect(() => { 
-    // Cargar datos previos del localStorage 
-    const savedData = JSON.parse(localStorage.getItem('registrationData') || '{}'); 
+    // Cargar datos previos del sessionStorage 
+    const savedData = JSON.parse(sessionStorage.getItem('registrationData') || '{}'); 
     setFormData(prev => ({ ...prev, ...savedData })); 
   }, []); 
  
@@ -25,9 +26,9 @@ const ContactInfo = () => {
  
   const handleSubmit = (e) => { 
     e.preventDefault(); 
-    // Guardar en localStorage 
-    localStorage.setItem('registrationData', JSON.stringify({ 
-      ...JSON.parse(localStorage.getItem('registrationData') || '{}'), 
+    // Guardar en sessionStorage 
+    sessionStorage.setItem('registrationData', JSON.stringify({ 
+      ...JSON.parse(sessionStorage.getItem('registrationData') || '{}'), 
       ...formData 
     })); 
     navigate('/register/confirmation'); 

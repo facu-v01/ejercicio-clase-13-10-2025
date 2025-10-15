@@ -6,6 +6,7 @@ import PersonalInfo from './pages/PersonalInfo';
 import ContactInfo from './pages/ContactInfo'; 
 import Confirmation from './pages/Confirmation'; 
 import Navbar from './components/Navbar';
+import User from './pages/User';
  
 function App() { 
   return ( 
@@ -20,6 +21,7 @@ function App() {
           <Route path="contact" element={<ContactInfo />} /> 
           <Route path="confirmation" element={<Confirmation />} />
         </Route>
+        <Route path="/user" element={<User />} />
       </Routes> 
     </div> 
   ); 
