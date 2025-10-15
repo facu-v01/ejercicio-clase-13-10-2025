@@ -19,9 +19,9 @@ const PersonalInfo = () => {
  
   const handleSubmit = (e) => { 
     e.preventDefault(); 
-    // Guardar en localStorage para persistir entre pasos 
-    localStorage.setItem('registrationData', JSON.stringify({ 
-      ...JSON.parse(localStorage.getItem('registrationData') || '{}'), 
+    // Guardar en sessionStorage para persistir entre pasos 
+    sessionStorage.setItem('registrationData', JSON.stringify({ 
+      ...JSON.parse(sessionStorage.getItem('registrationData') || '{}'), 
       ...formData 
     })); 
     navigate('/register/contact'); 
@@ -77,9 +77,9 @@ const PersonalInfo = () => {
           required 
         > 
           <option value="">Seleccionar</option> 
-          <option value="male">Masculino</option> 
-          <option value="female">Femenino</option> 
-          <option value="other">Otro</option> 
+          <option value="Masculino">Masculino</option> 
+          <option value="Femenino">Femenino</option> 
+          <option value="Otro">Otro</option> 
         </select> 
       </div> 
  

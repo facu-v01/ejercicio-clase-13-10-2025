@@ -4,12 +4,11 @@ import { Link, useNavigate } from 'react-router-dom';
 const Confirmation = () => { 
   const navigate = useNavigate(); 
   const [registrationData] = React.useState( 
-    () => JSON.parse(localStorage.getItem('registrationData') || '{}') 
+    () => JSON.parse(sessionStorage.getItem('registrationData') || '{}') 
   ); 
  
   const handleConfirm = () => { 
-    alert('¡Registro completado exitosamente!'); 
-    localStorage.removeItem('registrationData'); // Limpiar datos 
+    alert('¡Registro completado exitosamente!');
     navigate('/'); 
   }; 
  
