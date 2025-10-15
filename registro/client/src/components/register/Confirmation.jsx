@@ -20,8 +20,7 @@ const Confirmation = () => {
        
       <div style={{ border: '1px solid #ddd', padding: '20px', marginBottom: '20px' }}> 
         <h3>Información Personal</h3> 
-        <p><strong>Nombre:</strong> {registrationData.firstName} 
-{registrationData.lastName}</p> 
+        <p><strong>Nombre:</strong> {registrationData.firstName} {registrationData.lastName}</p> 
         <p><strong>Fecha de Nacimiento:</strong> {registrationData.dateOfBirth}</p> 
         <p><strong>Género:</strong> {registrationData.gender}</p> 
          
