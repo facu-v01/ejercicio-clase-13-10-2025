@@ -1,18 +1,17 @@
 import React from 'react'; 
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'; 
-import Home from './components/Home'; 
-import Register from './components/register/Register'; 
-import PersonalInfo from './components/register/PersonalInfo'; 
-import ContactInfo from './components/register/ContactInfo'; 
-import Confirmation from './components/register/Confirmation'; 
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
+import Home from './pages/Home'; 
+import Register from './pages/Register'; 
+import PersonalInfo from './pages/PersonalInfo'; 
+import ContactInfo from './pages/ContactInfo'; 
+import Confirmation from './pages/Confirmation'; 
+import Navbar from './components/Navbar';
  
 function App() { 
   return ( 
     <div className="app"> 
-      <nav style={{ padding: '20px', borderBottom: '1px solid #ccc' }}> 
-        <Link to="/" style={{ marginRight: '15px' }}>Inicio</Link> 
-        <Link to="/register">Registrarse</Link> 
-      </nav> 
+    
+      <Navbar />
 
       <Routes> 
         <Route path="/" element={<Home />} />
