@@ -5,7 +5,7 @@ import Posts from './pages/Posts';
 import NewPost from './pages/NewPost'; 
 import PostDetail from './components/PostDetail'; 
 import Stats from './pages/Stats';
- 
+import ClaroOscuro from './components/ClaroOscuro';  
 function App() { 
 
   const [posts, setPosts] = useState([ 
@@ -21,6 +21,7 @@ function App() {
           <Link to="/posts" style={{ marginRight: '15px' }}>Artículos</Link> 
           <Link to="/new-post" style={{ marginRight: '15px' }}>Nuevo Artículo</Link> 
           <Link to="/stats" style={{ marginRight: '15px' }}>Estadísticas</Link> 
+          <span style={{ float: 'right' }}><ClaroOscuro /></span>
         </nav> 
  
         <Routes> 
