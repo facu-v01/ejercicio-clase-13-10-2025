@@ -1,6 +1,24 @@
 const User = () => {
     const savedData = JSON.parse(sessionStorage.getItem('registrationData') || '{}'); 
 
+    // Calcular edad desde la fecha de nacimiento
+    let calculatedAge = null;
+    if (savedData.dateOfBirth) {
+        const birthDate = new Date(savedData.dateOfBirth);
+        const today = new Date();
+
+        let age = today.getFullYear() - birthDate.getFullYear();
+        const monthDiff = today.getMonth() - birthDate.getMonth();
+        const dayDiff = today.getDate() - birthDate.getDate();
+
+        // Ajuste si aún no cumplió años este año
+        if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+        age--;
+        }
+
+        calculatedAge = age;
+    }
+
     const creationDate = new Date(savedData.creationDate);
     const now = new Date();
 
@@ -22,6 +40,7 @@ const User = () => {
                     <h3>Información Personal</h3> 
                     <p><strong>Nombre:</strong> {savedData.firstName} {savedData.lastName}</p> 
                     <p><strong>Fecha de Nacimiento:</strong> {savedData.dateOfBirth}</p> 
+                    <p><strong>Edad:</strong> {calculatedAge}</p>
                     <p><strong>Género:</strong> {savedData.gender}</p> 
                     
                     <h3>Información de Contacto</h3> 
