@@ -1,8 +1,9 @@
-import React from 'react'; 
-import { Outlet, Link, useLocation } from 'react-router-dom'; 
+import React, { useEffect } from 'react'; 
+import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom'; 
  
 const Register = () => { 
   const location = useLocation(); 
+  const navigate = useNavigate();
    
   const steps = [ 
     { path: 'personal', label: 'Información Personal' }, 
@@ -13,6 +14,12 @@ const Register = () => {
   const currentStep = steps.findIndex(step =>  
     location.pathname.includes(step.path) 
   ); 
+
+  useEffect(() => {
+    if (location.pathname === '/register') {
+      navigate('personal', { replace: true });
+    }
+  }, [location.pathname, navigate]);
  
   return ( 
     <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto' }}> 
